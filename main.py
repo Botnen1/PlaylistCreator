@@ -9,12 +9,9 @@ sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id = k_client_ID,
                                                redirect_uri = k_redirect_URI, 
                                                scope = "playlist-modify-public"))
 
-
-
-
 print('Welcome to this playlist generator...\nLet us create your personalized playlist!')
 
-valg1 = input('What do you want to base the playlist on?:\n (G) = genre\n (A) = artist\n (M) = mood\n (Y) = year\n>>>')
+valg1 = input('What do you want to base the playlist on?:\n (G) = genre\n (A) = artist\n (M) = mood\n (Y) = year\n (GY) = genre & year\n (AY) = artist & year\n>>>')
 valg2 = input('How many songs do you want in your playlist? (max = 50)\n>>>')
 
 if valg1.lower() == 'g':
@@ -54,6 +51,28 @@ elif valg1.lower() == 'y':
     sp.playlist_add_items(playlist['id'], track_ids)
     print(f"Success!\nHere is your playlist:\n{playlist['external_urls']['spotify']}\nENJOY")
     
+    
+elif valg1.lower() == 'gy':
+    genre_pick = input('Enter your genre of choice: ')
+    year_pick = input('Enter your year of choice: ')
+    result = sp.search(q = f'genre:{genre_pick} year:{year_pick}', type = 'track', limit = valg2)
+    user_id = sp.current_user()['id']
+    playlist = sp.user_playlist_create(user_id, f"Playlist based on {genre_pick} and {year_pick} - Playlist Creator", public=True)
+    track_ids = [track['id'] for track in result['tracks']['items']]
+    sp.playlist_add_items(playlist['id'], track_ids)
+    print(f"Success!\nHere is your playlist:\n{playlist['external_urls']['spotify']}\nENJOY")
+    
+elif valg1.lower() == 'ay':
+    artist_pick = input('Enter your artist of choice: ')
+    year_pick = input('Enter your year of choice: ')
+    result = sp.search(q = f'artist:{artist_pick} year:{year_pick}', type = 'track', limit = valg2)
+    user_id = sp.current_user()['id']
+    playlist = sp.user_playlist_create(user_id, f"Playlist based on {artist_pick} and {year_pick} - Playlist Creator", public=True)
+    track_ids = [track['id'] for track in result['tracks']['items']]
+    sp.playlist_add_items(playlist['id'], track_ids)
+    print(f"Success!\nHere is your playlist:\n{playlist['external_urls']['spotify']}\nENJOY")
+
+
 else:
     print('Invalid Choice, get your shit together man')
 
