@@ -14,3 +14,11 @@ in the file 'koder.py'
 
 ![image](https://github.com/Botnen1/PlaylistCreator/assets/94934743/f843bf4e-64a2-4b09-a383-a876b013c10e)
 *example keys, not the actuall api keys to my code*
+
+
+example, running in terminal:
+![Skjermbilde 2024-01-28 115141](https://github.com/Botnen1/PlaylistCreator/assets/94934743/fe60469d-3dd7-484c-a636-4834a15c2cff)
+
+
+playlist appearing in spotify:
+![Skjermbilde 2024-01-28 115157](https://github.com/Botnen1/PlaylistCreator/assets/94934743/0ed6e5e1-ec36-413a-a73b-7894162ed2a0)
