@@ -16,9 +16,8 @@ in the file 'koder.py'
 *example keys, not the actuall api keys to my code*
 
 
-example, running in terminal:
-![Skjermbilde 2024-01-28 115141](https://github.com/Botnen1/PlaylistCreator/assets/94934743/fe60469d-3dd7-484c-a636-4834a15c2cff)
-
+example, running the gui
+![Skjermbilde 2024-01-29 200302](https://github.com/Botnen1/PlaylistCreator/assets/94934743/21124fa3-5aec-43fd-ac74-6d1ad7ef719d)
 
 playlist appearing in spotify:
-![Skjermbilde 2024-01-28 115157](https://github.com/Botnen1/PlaylistCreator/assets/94934743/0ed6e5e1-ec36-413a-a73b-7894162ed2a0)
+![Skjermbilde 2024-01-29 200324](https://github.com/Botnen1/PlaylistCreator/assets/94934743/1765719e-5593-4071-a2ab-00f8f6e1f5bc)
